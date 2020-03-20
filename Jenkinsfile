@@ -5,7 +5,7 @@ pipeline {
       stage('Build Stage') {
           
          steps {
-            bat 'snowsql -c myconnection --config C:\\Users\\91827\\.snowsql\\config -f Build\\GetItemMasterPrice_Target_DDL'
+            bat 'snowsql -c myconnection --config C:\\Users\\91827\\.snowsql\\config -f Build\\GetItemMasterPrice_Target_DDL.sql'
             bat 'snowsql -c myconnection --config C:\\Users\\91827\\.snowsql\\config -f Build\\ItemMasterPrice_Pending_Retail_Item_Price.sql'
             bat 'snowsql -c myconnection --config C:\\Users\\91827\\.snowsql\\config -f Build\\sp_GetItemMasterPrice_To_BIM_load.sql'
 
